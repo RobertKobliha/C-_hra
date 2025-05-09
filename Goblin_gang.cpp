@@ -4,58 +4,59 @@
 using namespace std;
 
 int zlato = 100;
-int meè = 1;
+int meÄ = 1;
 int magie = 1;
-int štít = 1;
+int Å¡tÃ­t = 1;
 
 void Intro() {
     cout << "==============================" << endl;
     cout << "        GOBLIN GANG          " << endl;
     cout << "==============================" << endl;
-    cout << "Zdravím cestovateli, vítej v Concer Worldu.\n";
-    cout << "Musím uznat, e dnes máš mizernı den.\n";
-    cout << "Nejde se odsud dostat, ledae bys zabil JE.\n";
-    cout << "ijí zde pouze goblini, kteøí se enou za zlatem,\n";
-    cout << "take pokud prohraješ, ztratíš všechno.\n";
-    cout << "Pro zaèátek ti dám 100 zlatıch.Hodnì štìstí.\n\n";
+    cout << "Zdravim cestovateli, vitej v Concer Worldu." << endl;
+    cout << "Musim uznat, ze dnes mas mizerny den." << endl;
+    cout << "Nejde se odsud dostat, ledaze bys zabil JE." << endl;
+    cout << "Ziji zde pouze goblini, ktery se zenou za zlatem," << endl;
+    cout << "takze pokud prohrajes, ztratis vsechno." << endl;
+    cout << "A neboj vsichni mluvi bez hacku a carek" << endl;
+    cout << "Pro zacatek ti dÃ¡m 100 zlatych.Hodne stesti." << endl;
 }
 
 
-void HlavníMenu() {
-    cout << "\n==============================" << endl;
+void HlavnÃ­Menu() {
+    cout << "==============================" << endl;
     cout << "Zlato: " << zlato << endl;
-    cout << "Co chceš dìlat?" << endl;
-    cout << "1 - Jít do obchodu" << endl;
+    cout << "Co chces delat?" << endl;
+    cout << "1 - Jit do obchodu" << endl;
     cout << "2 - Bojovat s gobliny" << endl;
     cout << "3 - Bojovat s final bossem" << endl;
-    cout << "4 - Ukonèit hru" << endl;
+    cout << "4 - Ukoncit hru" << endl;
     cout << "Volba: ";
 }
 
 
 void Obchod() {
-    int vıbìr;
+    int vÃ½bÄ›r;
     do {
         cout << "\n===== OBCHOD =====" << endl;
-        cout << "Zaplat nebo vypadni chudáky to nikdo nechce" << endl;
+        cout << "Zaplat nebo vypadni chudaky tu nikdo nechce" << endl;
         cout << "Zlato: " << zlato << endl;
-        cout << "1 - Vylepšit meè aktuální úroveò: " << meè << " - cena: " << meè * 30 << endl;
-        cout << "2 - Vylepšit kouzla aktuální úroveò: " << magie << " - cena: " << magie * 30 << endl;
-        cout << "3 - Vylepšit štít aktuální úroveò: " << štít << " - cena: " << štít * 30 << endl;
-        cout << "4 - Návrat do hlavního menu" << endl;
+        cout << "1 - Vylepsit mec aktuÃ¡lni Ãºroven: " << meÄ << " - cena: " << meÄ * 30 << endl;
+        cout << "2 - Vylepsit kouzla aktualni uroven: " << magie << " - cena: " << magie * 30 << endl;
+        cout << "3 - Vylepsit stit aktualni uroven: " << Å¡tÃ­t << " - cena: " << Å¡tÃ­t * 30 << endl;
+        cout << "4 - Navrat do hlavniho menu" << endl;
         cout << "Volba: ";
-        cin >> vıbìr;
+        cin >> vÃ½bÄ›r;
 
         int cena;
-        switch (vıbìr) {
+        switch (vÃ½bÄ›r) {
             case 1:
-                cena = meè * 30;
+                cena = meÄ * 30;
                 if (zlato >= cena) {
-                    meè++;
+                    meÄ++;
                     zlato -= cena;
-                    cout << "Meè byl vylepšen na úroveò " << meè << endl;
+                    cout << "Mec byl vylepsen na uroven " << meÄ << endl;
                 } else {
-                    cout << "Ha jseš chudej." << endl;
+                    cout << "Ha jses chudej." << endl;
                 }
                 break;
             case 2:
@@ -63,63 +64,64 @@ void Obchod() {
                 if (zlato >= cena) {
                     magie++;
                     zlato -= cena;
-                    cout << "Kouzla byla vylepšena na úroveò " << magie << "!" << endl;
+                    cout << "Kouzla byla vylepsena na uroven " << magie << "!" << endl;
                 } else {
-                    cout << "Ha jseš chudej." << endl;
+                    cout << "Ha jses chudej." << endl;
                 }
                 break;
             case 3:
-                cena = štít * 30;
+                cena = Å¡tÃ­t * 30;
                 if (zlato >= cena) {
-                    štít++;
+                    Å¡tÃ­t++;
                     zlato -= cena;
-                    cout << "Štít byl vylepšen na úroveò " << štít << "!" << endl;
+                    cout << "Stit byl vylepsen na uroven " << Å¡tÃ­t << "!" << endl;
                 } else {
-                    cout << "Ha jseš chudej." << endl;
+                    cout << "Ha jses chudej." << endl;
                 }
                 break;
             case 4:
-                cout << "Odešel jsi z obchodu, chudší nebo bez nièeho, kadopádnì ostuda." << endl;
+                cout << "Odesel jsi z obchodu, chudsÃ­ nebo bez niceho, kazdopadne ostuda." << endl;
                 break;
             default:
-                cout << "Neplatná volba." << endl;
+                cout << "Neplatna volba." << endl;
         }
-    } while (vıbìr != 4);
+    } while (vÃ½bÄ›r != 4);
 }
 
 void goblini() {
-    cout << "\n(Goblini nevypadají jako zdatní bojovníci ale dokáou pøekvapit obvzlášt kdy máš zlato. Èím více ho máš tím jsou silnìjší.)\n";
+    cout << "Goblini nevypadajÃ­ jako zdatnÃ­ bojovnÃ­ci ale dokÃ¡zou prekvapit obvzlÃ¡st kdyz mÃ¡s zlato. CÃ­m vÃ­ce ho mÃ¡s tÃ­m jsou silnejsi.";
+    //cout <<
 }
 
 void Boss() {
-    cout << "\n(Oni, postrach všech goblinù a lidí. Nepatøí sem, ale parazitování na jinıch je a moc baví)\n";
+    cout << "Oni, postrach vsech goblinu a lidi. NepatrÃ­ sem, ale parazitovÃ¡nÃ­ na jinych je az moc bavi";
 }
 
 int main() {
-    int vıbìr;
+    int vÃ½bÄ›r;
     Intro();
 
     do {
-        HlavníMenu();
-        cin >> vıbìr;
+        HlavnÃ­Menu();
+        cin >> vÃ½bÄ›r;
 
-        switch (vıbìr) {
+        switch (vÃ½bÄ›r) {
             case 1:
-                openShop();
+                Obchod();
                 break;
             case 2:
-                fightGoblins();
+                goblini();
                 break;
             case 3:
-                fightBoss();
+                Boss();
                 break;
             case 4:
-                cout << "Konec hry. Díky za hraní!" << endl;
+                cout << "Konec hry. Diky za hrani!" << endl;
                 break;
             default:
-                cout << "Neplatná volba." << endl;
+                cout << "Neplatna volba." << endl;
         }
-    } while (vıbìr != 4);
+    } while (vÃ½bÄ›r != 4);
 
     return 0;
 }
