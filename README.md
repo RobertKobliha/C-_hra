@@ -1,2 +1,2 @@
 # C-_hra
-Omlouvám se za pozdní odevzdání 
+V obou souborech je hra
